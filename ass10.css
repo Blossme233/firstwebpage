@@ -1,94 +1,124 @@
 @import url('https://fonts.googleapis.com/css2?family=Smooch&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
 
-h1, h2 {
-    color: black;
-}
-
-p {
-    color: black;
-}
-
-ul {
-    border: 2px solid black;
-}
-
-ol {
-    border: 2px solid black;
-}
-
-ol, ul {
-    padding: 5px 20px;
-    border-radius: 4px;
-    font-family: 'Poiret One', cursive;
-}
-
-strong {
-    color: red;
-}
-
-em {
-    color: purple;
-}
-
-.wrapper {
-    display: flex;
-    flex-flow: column wrap;
-    font-weight: bold;
-    text-align: center;
-}
-
-.wrapper>* {
-    padding: 10px;
-    flex: 1 100%;
-}
-
-.header {
-    background: cornflowerblue;
-}
-
-.footer {
-    background: cornflowerblue;
-    font-family: 'Smooch', cursive;
-}
-
-.main {
-    text-align: left;
-    background: lightcyan;
-}
-
-.aside {
-    background-color: lightblue;
-    display: grid;
-    justify-self: stretch;
-}
-
-
-@media all and (min-width: 600px) {
-    .aside {
-        flex: 1 0 0;
-    }
-}
-
-@media all and (min-width: 800px) {
-    .main {
-        flex: 3 0px;
-    }
-
-    .aside {
-        order: 2;
-    }
-
-    .main {
-        order: 1;
-    }
-
-
-    .footer {
-        order: 3;
-    }
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-    padding: 2em;
+  background: rgb(240, 239, 199);
+  font-family: 'Smooch', cursive;
+  font-size: 16px;
+}
+
+h1,
+h2 {
+  font-family: 'Poiret One', cursive; 
+  font-weight: 500;
+  font-size: 1.5em;
+  padding: 1.3em 0;
+}
+
+h2 {font-size:1.25em;}
+
+header,
+main,
+aside,
+footer {
+  padding: 1.5em;
+  border: 1px black solid;
+}
+nav {
+    padding: 1.0em;
+    border: 1px black solid;
+}
+header,
+footer {
+  text-align: center;
+}
+
+nav{
+    font-family: 'Poiret One', cursive; 
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: rgb(175, 222, 176);
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-columns:
+   1fr       2fr       1fr;
+  grid-template-areas:
+  "aside1     heady     aside2"
+  "aside1    mainy     aside2"
+  "aside1    mainy     aside2"
+  "aside1    mainy     aside2"
+  "navvy1     mainy     navvy2"
+  "footy     footy     footy";
+}
+
+header {grid-area: heady; background:rgb(254, 218, 175);}
+#nav1 {grid-area: navvy1; background:rgb(232, 206, 236);}
+#nav2 {grid-area: navvy2; background:rgb(232, 206, 236);}
+main {grid-area: mainy; background: rgb(240, 234, 182); max-height: 100%;}
+#aside1 {grid-area: aside1; background: rgb(191, 226, 246);}
+#aside2 {grid-area: aside2; background: rgb(191, 226, 246);}
+footer {grid-area: footy; background: rgb(171, 171, 171);}
+
+nav ul {
+display: flex;
+flex-flow: row nowrap;
+justify-content: space-around;
+}
+
+nav ul li {
+  list-style: none
+}
+
+@media screen
+  and (min-width: 641px)
+  and (max-width: 900px)  {
+.container {
+grid-template-columns:
+   1fr 1fr;
+grid-template-areas:
+  "heady heady"
+  "mainy mainy"
+  "aside1 aside2"
+  "navvy1 navvy2"
+  "footy footy";
+}
+}
+
+@media screen
+  and (max-width: 640px)  {
+.container {
+grid-template-columns:
+   1fr;
+grid-template-areas:
+  "heady"
+  "mainy"
+  "aside1"
+  "navvy1"
+  "aside2"
+  "navvy2"
+  "footy";
+}
+nav ul {
+  flex-flow: column nowrap;
+  text-align: center;
+}
+nav ul li a {
+  display: block;
+  padding: 10px 5px;
+  margin: 5px;
+  border: 1px black solid;
+  background: white;
+
+}
 }
