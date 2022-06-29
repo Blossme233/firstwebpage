@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Smooch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+h1, h2 {
+    color: black;
+}
+
+p {
+    color: black;
+}
+
+ul {
+    border: 2px solid black;
+}
+
+ol {
+    border: 2px solid black;
+}
+
+ol, ul {
+    padding: 5px 20px;
+    border-radius: 4px;
+    font-family: 'Poiret One', cursive;
+}
+
+strong {
+    color: red;
+}
+
+em {
+    color: purple;
+}
+
+.wrapper {
+    display: flex;
+    flex-flow: column wrap;
+    font-weight: bold;
+    text-align: center;
+}
+
+.wrapper>* {
+    padding: 10px;
+    flex: 1 100%;
+}
+
+.header {
+    background: cornflowerblue;
+}
+
+.footer {
+    background: cornflowerblue;
+    font-family: 'Smooch', cursive;
+}
+
+.main {
+    text-align: left;
+    background: lightcyan;
+}
+
+.aside {
+    background-color: lightblue;
+    display: grid;
+    justify-self: stretch;
+}
+
+
+@media all and (min-width: 600px) {
+    .aside {
+        flex: 1 0 0;
+    }
+}
+
+@media all and (min-width: 800px) {
+    .main {
+        flex: 3 0px;
+    }
+
+    .aside {
+        order: 2;
+    }
+
+    .main {
+        order: 1;
+    }
+
+
+    .footer {
+        order: 3;
+    }
+}
+
+body {
+    padding: 2em;
+}
