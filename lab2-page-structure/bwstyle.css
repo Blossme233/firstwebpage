@@ -56,6 +56,7 @@ p, li {
 header {
   margin-bottom: 10px;
   display: flex;
+  width: 100%;
   flex-flow: row wrap;
 }
 
@@ -139,6 +140,7 @@ aside img {
 
 footer {
   margin-top: 10px;
+  width: 100%;
 }
 
 /* HK additions */
