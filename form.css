@@ -1,0 +1,51 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+/* form styling */
+
+legend {
+	font-weight: 800;
+	font-size: x-large;
+	font-family: 'Bebas Neue', cursive;
+}
+
+#wrapper {
+	width: 60%;
+	margin-left: 4%;
+}
+
+div#formcol1 {
+	float: left;
+	width: 100%;
+}
+
+label {
+	margin-right: .3em;
+	width: 6.3em;
+	/* I made this deliberately wide – come up with your own optimal width */
+	display: inline-block;
+
+	/* width will not work for “inline” elements such as “label”. Therefore we need to set it to “inline-block” */
+}
+
+#formcol1 label {
+	text-align: right;
+}
+
+#formcol1 li {
+	list-style: none;
+}
+
+/* end of form css */
+
+select:focus, select:active, input:focus, input:active, input:focus+label, input:active+label, label[for]:focus, label[for]:active {
+	color: #FFF !important;
+	background-color: #BB3D2F !important;
+}
+
+#formcol1 input.reqfield {
+	background: darkolivegreen;
+}
+
+.required {
+	color: red;
+}
