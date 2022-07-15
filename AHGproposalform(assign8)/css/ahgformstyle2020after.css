@@ -1,0 +1,70 @@
+/* CSS */
+
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+/* form styling */
+
+
+legend {
+	font-weight: 800;
+	font-size: x-large;
+	font-family: 'Bebas Neue', cursive;
+}
+
+
+#formstart {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 200%;
+	font-weight: bold;
+}
+
+.outline3 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 150%;
+	font-weight: bold;
+}
+
+.outline4 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 120%;
+	font-weight: bold;
+}
+
+select:focus,
+select:active,
+input:focus,
+input:active,
+input:focus+label,
+input:active+label,
+label[for]:focus,
+label[for]:active {
+	color: #FFF !important;
+	background-color: #BB3D2F !important;
+}
+
+label {
+	margin-right: .3em;
+	width: 6.3em;
+	/* I made this deliberately wide – come up with your own optimal width */
+	display: inline-block;
+	text-align: right;
+
+	/* width will not work for “inline” elements such as “label”. Therefore we need to set it to “inline-block” */
+}
+
+#choice label {
+	text-align: Left;
+}
+
+#content {
+	width: 60%;
+	margin-left: 4%;
+}
+
+#require1 label {
+	color: red;
+}
+
+#require2 label {
+	color: red;
+}

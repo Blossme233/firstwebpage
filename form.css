@@ -49,3 +49,4 @@ select:focus, select:active, input:focus, input:active, input:focus+label, input
 .required {
 	color: red;
 }
+
