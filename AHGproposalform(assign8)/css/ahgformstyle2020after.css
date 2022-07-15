@@ -54,6 +54,7 @@ label {
 
 #choice label {
 	text-align: Left;
+	color: navy;
 }
 
 #content {
@@ -62,9 +63,9 @@ label {
 }
 
 #require1 label {
-	color: red;
+	color: navy;
 }
 
 #require2 label {
-	color: red;
+	color: navy;
 }
